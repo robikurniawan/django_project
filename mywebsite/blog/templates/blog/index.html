@@ -1,0 +1,35 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  {{ judul }} </title>
+    <style>
+        body{
+            font-family: arial;
+        }
+    </style>
+
+</head>
+<body>
+
+    <img style="width: 100%" src="{% static "img/banner_blog.png" %}" alt="">
+
+
+    <h2>Selamat Datang </h2>
+    <h1>{{ judul }}</h1>
+    <h4>Django Framework | by  {{ kontributor }} </h4>
+
+    {#  template tags #}
+
+    {% for link,name in nav  %}
+
+        <li><a href="{{ link  }}">  {{ name }} </a> </li>
+
+    {% endfor %}
+
+
+</body>
+</html>
